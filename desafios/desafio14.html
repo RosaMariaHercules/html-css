@@ -18,32 +18,85 @@
         th{
             background-color: gray;
         }
+        th, td{
+            padding: 20px;
+        }
+        th{ 
+            color: white;
+
+        }
+        th.fundo{
+            color: black;
+            background-color: white;
+        }
+        td.nova{
+            color: white;
+            background-color: grey 
+        }
+        th.letras{
+            text-align: left;
+        }
     </style>
 </head>
 <body>
     <table>
-        <thead>
+      
            
-             
-        <th>Área</th>
-        <th>Disciplina</th>
-        <th>colpan="2">Notas</th>
-        <td>Nota 1</td>
-        <td>Nota 2</td>
-
-          
-            
-       
-        <th>Média</th> 
-    </thead>
+         <tr>    
+            <th rowspan="2" scope="col">Área</th>
+            <th rowspan="2" scope="col">Disciplinas</th>
+            <th colspan="2" scope="colgroup">Notas</th>
+            <th rowspan="2" scope="col">Média</th>
+    </tr>
+    <tr>
+        <th scope="col">Nota 1</th>
+            <th scope="col">Nota 2</th>
+    </tr>
  <tbody>
-       <th colspan="4">Exatas</th>
+       <th class="fundo" rowspan="4">Exatas</th>
        <td>Matemática</td>
        <td>8</td>
        <td>7</td>
        <td>7.5</td>
-       t
-
+       <tr>
+           <td>Física</td>
+           <td>10</td>
+           <td>10</td>
+           <td>10</td>
+       </tr>
+       <tr>
+           <td>Química</td>
+           <td>10</td>
+           <td>10</td>
+           <td>10</td>
+       </tr>
+       <tr>
+           <td>Biologia</td>
+           <td>10</td>
+           <td>10</td>
+           <td>10</td>
+       </tr>
+       <tr>
+       <th class="letras" colspan="4" scope="colgroup">Média das exatas</th>
+       <td class="nova">10</td>
+    </tr>
+       <tr>
+       <th class="fundo" rowspan="2" scope="rowgroup">Humanas</th>
+       <td>História</td>
+       <td>10</td>
+       <td>10</td>
+       <td>10</td>
+    </tr>
+    <tr>
+        <td>Geografia</td>
+        <td>10</td>
+        <td>10</td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <th class="letras" colspan="4" scope="row">Média das Humanas</th>
+        <td class="nova">10</td>
+       </tr>
     </tbody>         
        
     </table>
